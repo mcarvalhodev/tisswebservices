@@ -64,6 +64,11 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 	}
 	
 	@Bean
+	public SimpleWsdl11Definition tissSolicitacaoStatusAutorizacaoV3_04_00() {
+		return new SimpleWsdl11Definition(new ClassPathResource("tissSolicitacaoStatusAutorizacaoV3_04_00.wsdl"));
+	}
+	
+	@Bean
 	public SimpleWsdl11Definition tissSolicitacaoProcedimentoV3_04_00() {
 		return new SimpleWsdl11Definition(new ClassPathResource("tissSolicitacaoProcedimentoV3_04_00.wsdl"));
 	}
