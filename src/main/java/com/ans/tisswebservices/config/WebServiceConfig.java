@@ -36,7 +36,8 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 	}
 
 	@Bean
-	public ServletRegistrationBean<MessageDispatcherServlet> messageDispatcherServlet(ApplicationContext applicationContext) {
+	public ServletRegistrationBean<MessageDispatcherServlet> messageDispatcherServlet(
+			ApplicationContext applicationContext) {
 		MessageDispatcherServlet servlet = new MessageDispatcherServlet();
 		servlet.setApplicationContext(applicationContext);
 		servlet.setTransformWsdlLocations(true);
@@ -47,30 +48,35 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 	public SimpleWsdl11Definition tissVerificaElegibilidadeV3_04_00() {
 		return new SimpleWsdl11Definition(new ClassPathResource("tissVerificaElegibilidadeV3_04_00.wsdl"));
 	}
-	
+
 	@Bean
 	public SimpleWsdl11Definition tissSolicitacaoDemonstrativoRetornoV3_04_00() {
 		return new SimpleWsdl11Definition(new ClassPathResource("tissSolicitacaoDemonstrativoRetornoV3_04_00.wsdl"));
 	}
-	
+
 	@Bean
 	public SimpleWsdl11Definition tissSolicitacaoStatusRecursoGlosaV3_04_00() {
 		return new SimpleWsdl11Definition(new ClassPathResource("tissSolicitacaoStatusRecursoGlosaV3_04_00.wsdl"));
 	}
-	
+
 	@Bean
 	public SimpleWsdl11Definition tissSolicitacaoStatusProtocoloV3_04_00() {
 		return new SimpleWsdl11Definition(new ClassPathResource("tissSolicitacaoStatusProtocoloV3_04_00.wsdl"));
 	}
-	
+
 	@Bean
 	public SimpleWsdl11Definition tissSolicitacaoStatusAutorizacaoV3_04_00() {
 		return new SimpleWsdl11Definition(new ClassPathResource("tissSolicitacaoStatusAutorizacaoV3_04_00.wsdl"));
 	}
-	
+
 	@Bean
 	public SimpleWsdl11Definition tissSolicitacaoProcedimentoV3_04_00() {
 		return new SimpleWsdl11Definition(new ClassPathResource("tissSolicitacaoProcedimentoV3_04_00.wsdl"));
+	}
+
+	@Bean
+	public SimpleWsdl11Definition tissRecursoGlosaV3_04_00() {
+		return new SimpleWsdl11Definition(new ClassPathResource("tissRecursoGlosaV3_04_00.wsdl"));
 	}
 
 	@Bean
