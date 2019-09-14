@@ -16,7 +16,7 @@ import org.springframework.xml.xsd.XsdSchema;
 @EnableWs
 @Configuration
 public class WebServiceConfig extends WsConfigurerAdapter {
-	
+
 	@Bean
 	public Jaxb2Marshaller marshaller() {
 		Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
@@ -77,6 +77,11 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 	@Bean
 	public SimpleWsdl11Definition tissRecursoGlosaV3_04_00() {
 		return new SimpleWsdl11Definition(new ClassPathResource("tissRecursoGlosaV3_04_00.wsdl"));
+	}
+
+	@Bean
+	public SimpleWsdl11Definition tissLoteGuiasV3_04_00() {
+		return new SimpleWsdl11Definition(new ClassPathResource("tissLoteGuiasV3_04_00.wsdl"));
 	}
 
 	@Bean
