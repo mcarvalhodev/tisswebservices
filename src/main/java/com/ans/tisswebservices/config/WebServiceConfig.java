@@ -83,6 +83,11 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 	public SimpleWsdl11Definition tissLoteGuiasV3_04_00() {
 		return new SimpleWsdl11Definition(new ClassPathResource("tissLoteGuiasV3_04_00.wsdl"));
 	}
+	
+	@Bean
+	public SimpleWsdl11Definition tissLoteAnexoV3_04_00() {
+		return new SimpleWsdl11Definition(new ClassPathResource("tissLoteAnexoV3_04_00.wsdl"));
+	}	
 
 	@Bean
 	public XsdSchema tissWebServicesV3_04_00() {
